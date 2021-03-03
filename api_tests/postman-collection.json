@@ -19,7 +19,13 @@
 									"",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"",
+									"pm.test(\"Response\", function () {",
+									"    let response = pm.response.json();",
+									"    pm.expect(response.message[0].name).to.eql('FA Cup');",
+									"});",
+									""
 								],
 								"type": "text/javascript"
 							}
